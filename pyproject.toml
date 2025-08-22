@@ -1,0 +1,34 @@
+# ref. https://github.com/numpy/numpy/blob/main/numpy/_core/code_generators/cversions.txt
+# for C_ABI_VERSION compatibility,
+# and https://github.com/numpy/numpy/releases for python / numpy version compatibility
+
+[build-system]
+build-backend = "cmeel"
+requires = [
+  "cmeel[build]",
+  "cmeel-eigen",
+  "nanobind",
+  "numpy >=2.0, <2.1 ; python_version >= '3.9.0' and python_version < '3.10.0'",
+  "numpy >=2.2, <2.3 ; python_version >= '3.10.0' and python_version < '3.11.0'",
+  "numpy >=2.3, <2.4 ; python_version >= '3.11.0'",
+]
+
+[project]
+dependencies = [
+  "numpy >=2.0, <2.1 ; python_version >= '3.9.0' and python_version < '3.10.0'",
+  "numpy >=2.2, <2.3 ; python_version >= '3.10.0' and python_version < '3.11.0'",
+  "numpy >=2.3, <2.4 ; python_version >= '3.11.0'",
+]
+description = "A support library for bindings between Eigen in C++ and Python, based on nanobind"
+license = "BSD-3-Clause"
+name = "nanoeigenpy"
+requires-python = ">= 3.9"
+version = "0.0.1"
+
+[project.urls]
+homepage = "https://github.com/cmake-wheel/nanobind"
+repository = "https://github.com/cmake-wheel/nanobind.git"
+upstream = "https://github.com/simple-robotics/nanobind"
+
+[tool.tomlsort]
+all = true
