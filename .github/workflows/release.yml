@@ -12,7 +12,7 @@ on:
 
 env:
   CMEEL_LOG_LEVEL: DEBUG
-  DEPS: cmeel-eigen nanobind numpy pytest scipy
+  DEPS: cmeel-eigen nanobind numpy pip pytest scipy
   PROJECT: nanoeigenpy
 
 jobs:
