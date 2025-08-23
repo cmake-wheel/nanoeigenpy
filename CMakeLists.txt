@@ -107,11 +107,6 @@ if(WIN32)
 endif()
 
 # Detect the installed nanobind package and import it into CMake
-execute_process(
-  COMMAND "${Python_EXECUTABLE}" -m nanobind --cmake_dir
-  OUTPUT_STRIP_TRAILING_WHITESPACE
-  OUTPUT_VARIABLE nanobind_DIR
-)
 find_package(nanobind CONFIG REQUIRED)
 
 # Setup main targets
