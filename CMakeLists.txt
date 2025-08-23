@@ -112,6 +112,10 @@ execute_process(
   OUTPUT_STRIP_TRAILING_WHITESPACE
   OUTPUT_VARIABLE nanobind_DIR
 )
+message(WARNING "DEBUG -- ${nanobind_DIR} -- ")
+file(READ "${nanobind_DIR}/nanobind-config.cmake" nanout)
+message(WARNING "DEBUG -- ${nanout} -- ")
+
 find_package(nanobind CONFIG REQUIRED)
 
 # Setup main targets
